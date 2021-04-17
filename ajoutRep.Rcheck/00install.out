@@ -1,0 +1,9 @@
+* installing *source* package 'ajoutRep' ...
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+Error in library(gsheet) : there is no package called 'gsheet'
+Erreur : unable to load R code in package 'ajoutRep'
+Exécution arrêtée
+ERROR: lazy loading failed for package 'ajoutRep'
+* removing 'C:/Users/popco/Documents/GitHub/ajoutRep/ajoutRep.Rcheck/ajoutRep'

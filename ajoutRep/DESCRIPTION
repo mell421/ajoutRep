@@ -1,0 +1,10 @@
+Package: ajoutRep
+Title: Package de test
+Version: 0.0.0.9000
+Authors@R: person("Melanie","Eyraud",role = c("aut", "cre"),
+           email = "melanie.eyraud421@gmail.com")
+Description: Package pour les series TV genre TV Time
+Depends: R (>= 3.4.3)
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
