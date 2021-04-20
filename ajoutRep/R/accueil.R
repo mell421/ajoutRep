@@ -2,7 +2,6 @@
 # install.packages("gsheet")
 
 # usethis::use_vignette("base_de_donnees_principale")
-source("C:/Users/popco/Documents/GitHub/ajoutRep/ajoutRep/R/sources.R")
 
 
 # fonction qui charge la page d'accueil
@@ -15,3 +14,5 @@ accueil <- function(){
   print("->")
   return(table)
 }
+s <- accueil()
+head(s)

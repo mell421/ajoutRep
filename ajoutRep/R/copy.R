@@ -66,6 +66,7 @@ copy.concat <- function(){
 copy.eff <- function(){
   table <- suppressWarnings(gsheet2tbl('https://docs.google.com/spreadsheets/d/1HZydd6qo-GcQVqnwQnerHHnMEyR6faJXKN7Egkuqp4I/edit#gid=1292069466'))
   table <- table[56:79]
+  table <- table[2:max(length(table)),]
   table <- data.frame(table)
   na.omit(table)
   print("1-2-3-4")
