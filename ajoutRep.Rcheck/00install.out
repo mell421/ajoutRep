@@ -1,6 +1,7 @@
 * installing *source* package 'ajoutRep' ...
 ** using staged installation
 ** R
+** inst
 ** byte-compile and prepare package for lazy loading
 Error in library(gsheet) : there is no package called 'gsheet'
 Erreur : unable to load R code in package 'ajoutRep'

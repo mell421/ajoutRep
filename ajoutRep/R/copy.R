@@ -1,19 +1,7 @@
 # devtools::document("ajoutRep")
 # install.packages("gsheet")
-library(gsheet)
-library(dplyr)
-usethis::use_vignette("base_de_donnees_principale")
+# usethis::use_vignette("base_de_donnees_principale")
 
-# fonction qui charge la page d'accueil
-accueil <- function(){
-  table <- suppressWarnings(gsheet2tbl('https://docs.google.com/spreadsheets/d/1HZydd6qo-GcQVqnwQnerHHnMEyR6faJXKN7Egkuqp4I/edit#gid=1775525986'))
-  table <- table[1:15]
-  na.omit(table)
-  table <- data.frame(table)
-  print("1horodateur-2titre-3saison-4episode-5status-6tisa-7tisaep-8indice-9sa-10hh-11image-12descrImg-13sec-14minute-15tisaet")
-  print("->")
-  return(table)
-}
 # fonction qui charge la page copy code
 copy.code <- function(){
   table <- suppressWarnings(gsheet2tbl('https://docs.google.com/spreadsheets/d/1HZydd6qo-GcQVqnwQnerHHnMEyR6faJXKN7Egkuqp4I/edit#gid=1292069466'))
@@ -58,8 +46,8 @@ copy.mois <- function(){
 copy.smra <- function(){
   table <- suppressWarnings(gsheet2tbl('https://docs.google.com/spreadsheets/d/1HZydd6qo-GcQVqnwQnerHHnMEyR6faJXKN7Egkuqp4I/edit#gid=1292069466'))
   table <- table[44:49]
-  na.omit(table)
   table <- data.frame(table)
+  na.omit(table)
   print("1jour-2date-3a-4r-5m-6s")
   print("->")
   return(table)
@@ -68,8 +56,8 @@ copy.smra <- function(){
 copy.concat <- function(){
   table <- suppressWarnings(gsheet2tbl('https://docs.google.com/spreadsheets/d/1HZydd6qo-GcQVqnwQnerHHnMEyR6faJXKN7Egkuqp4I/edit#gid=1292069466'))
   table <- table[50:53]
-  na.omit(table)
   table <- data.frame(table)
+  na.omit(table)
   print("1-2-3-4")
   print("->")
   return(table)
@@ -78,14 +66,14 @@ copy.concat <- function(){
 copy.eff <- function(){
   table <- suppressWarnings(gsheet2tbl('https://docs.google.com/spreadsheets/d/1HZydd6qo-GcQVqnwQnerHHnMEyR6faJXKN7Egkuqp4I/edit#gid=1292069466'))
   table <- table[56:79]
-  na.omit(table)
   table <- data.frame(table)
+  na.omit(table)
   print("1-2-3-4")
   print("->")
   return(table)
 }
 
-mainTest <- function(){
+mainCopy <- function(){
   s <- accueil()
   print(s[1,])
   t <- copy.code()
@@ -95,14 +83,3 @@ mainTest <- function(){
   v <- copy.sem()
   print(v[1,])
 }
-
-aleat <- function(max,nb){
-  tirage <- sample(1:max,nb)
-}
-
-bigraphLine <- function(var1,var2,xAxis){
-  win.graph(600,400,10)
-  plot(var1,type = "l",col="red",xlab = xAxis)
-  lines(var2,type = "l",col="blue")
-}
-
