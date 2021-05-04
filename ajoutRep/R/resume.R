@@ -9,8 +9,7 @@ copy.all <- function(){
   table <- table[1:2]
   table <- data.frame(table)
   na.omit(table)
-  print("1-2")
-  print("->")
+
   return(table)
 }
 
@@ -22,8 +21,7 @@ listDesc.desc <- function(){
   table <- table[1:8]
   table <- data.frame(table)
   na.omit(table)
-  print("1-2-3-4-5-6-7-8")
-  print("->")
+
   return(table)
 }
 # fonction qui charge la page listDesc ec
@@ -32,8 +30,7 @@ listDesc.ec <- function(){
   table <- table[9:14]
   table <- data.frame(table)
   na.omit(table)
-  print("1-2-3-4-5-6")
-  print("->")
+
   return(table)
 }
 # fonction qui charge la page listDesc ter
@@ -42,8 +39,6 @@ listDesc.ter <- function(){
   table <- table[16:21]
   table <- data.frame(table)
   na.omit(table)
-  print("1-2-3-4-5-6")
-  print("->")
   return(table)
 }
 # fonction qui charge la page listDesc special
@@ -52,8 +47,6 @@ listDesc.special <- function(){
   table <- table[23:28]
   table <- data.frame(table)
   na.omit(table)
-  print("1-2-3-4-5-6")
-  print("->")
   return(table)
 }
 
@@ -65,8 +58,6 @@ listeCompl.film <- function(){
   table <- table[11:14]
   table <- data.frame(table)
   na.omit(table)
-  print("1-2-3-4")
-  print("->")
   return(table)
 }
 # fonction qui charge la page fini
@@ -85,8 +76,6 @@ listeCompl.ec <- function(){
   table <- table[21:24]
   table <- data.frame(table)
   na.omit(table)
-  print("1-2-3-4")
-  print("->")
   return(table)
 }
 
@@ -98,8 +87,6 @@ premder.prem.der <- function(){
   table <- table[20:23]
   table <- data.frame(table)
   na.omit(table)
-  print("1-2-3-4")
-  print("->")
   return(table)
 }
 # fonction qui charge la page premder
@@ -108,28 +95,22 @@ premder.premder <- function(){
   table <- table[25:27]
   table <- data.frame(table)
   na.omit(table)
-  print("1-2-3")
-  print("->")
   return(table)
 }
 # fonction qui charge la page premder ec
-premder.premder.ec <- function(){
+premder.ec <- function(){
   table <- suppressWarnings(gsheet2tbl('https://docs.google.com/spreadsheets/d/1HZydd6qo-GcQVqnwQnerHHnMEyR6faJXKN7Egkuqp4I/edit#gid=1010487981'))
   table <- table[29:32]
   table <- data.frame(table)
   na.omit(table)
-  print("1-2-3-4")
-  print("->")
   return(table)
 }
 # fonction qui charge la page premder ter
-premder.premder.ter <- function(){
+premder.ter <- function(){
   table <- suppressWarnings(gsheet2tbl('https://docs.google.com/spreadsheets/d/1HZydd6qo-GcQVqnwQnerHHnMEyR6faJXKN7Egkuqp4I/edit#gid=1010487981'))
   table <- table[34:37]
   table <- data.frame(table)
   na.omit(table)
-  print("1-2-3-4")
-  print("->")
   return(table)
 }
 
@@ -140,8 +121,6 @@ resumeS <- function(){
   table <- suppressWarnings(gsheet2tbl('https://docs.google.com/spreadsheets/d/1HZydd6qo-GcQVqnwQnerHHnMEyR6faJXKN7Egkuqp4I/edit#gid=653265366'))
   table <- data.frame(table)
   na.omit(table)
-  print("1-2-3-4-5")
-  print("->")
   return(table)
 }
 
@@ -152,8 +131,6 @@ resumeM <- function(){
   table <- suppressWarnings(gsheet2tbl('https://docs.google.com/spreadsheets/d/1HZydd6qo-GcQVqnwQnerHHnMEyR6faJXKN7Egkuqp4I/edit#gid=1595940985'))
   table <- data.frame(table)
   na.omit(table)
-  print("1-2-3-4-5")
-  print("->")
   return(table)
 }
 
@@ -165,8 +142,6 @@ smra <- function(){
   table <- table[1:5]
   table <- data.frame(table)
   na.omit(table)
-  print("1-2-3-4-5")
-  print("->")
   return(table)
 }
 # fonction qui charge la page ordre a terminer
@@ -175,8 +150,7 @@ ordreATerm <- function(){
   table <- table[10:13]
   table <- data.frame(table)
   na.omit(table)
-  print("1-2-3-4")
-  print("->")
+
   return(table)
 }
 

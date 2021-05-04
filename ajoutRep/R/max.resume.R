@@ -9,8 +9,7 @@ max.resume.date <- function(){
   table <- table[1:5]
   table <- data.frame(table)
   na.omit(table)
-  print("1-2-3-4-5")
-  print("->")
+
   return(table)
 }
 # fonction qui charge la page maxResume pc
@@ -19,8 +18,6 @@ max.resume.pc <- function(){
   table <- table[9:13]
   table <- data.frame(table)
   na.omit(table)
-  print("1-2-3-4-5")
-  print("->")
   return(table)
 }
 # fonction qui charge la page concluResume date
@@ -29,8 +26,7 @@ conclu.resume.date <- function(){
   table <- table[1:5]
   table <- data.frame(table)
   na.omit(table)
-  print("1-2-3-4-5")
-  print("->")
+
   return(table)
 }
 # fonction qui charge la page concluResume pc
@@ -39,7 +35,5 @@ conclu.resume.pc <- function(){
   table <- table[7:11]
   table <- data.frame(table)
   na.omit(table)
-  print("1-2-3-4-5")
-  print("->")
   return(table)
 }
