@@ -10,6 +10,7 @@ loadMesSources <- function(){
   source("~/GitHub/ajoutRep/ajoutRep/R/nombre.R")
   source("~/GitHub/ajoutRep/ajoutRep/R/max.resume.R")
   source("~/GitHub/ajoutRep/ajoutRep/R/resume.R")
+  source("~/GitHub/ajoutRep/ajoutRep/R/page.R")
 }
 installMesPackages <- function(){
   install.packages("gsheet")

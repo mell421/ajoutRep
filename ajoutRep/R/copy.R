@@ -5,7 +5,7 @@
 # fonction qui charge la page copy
 copy <- function(){
   table <- suppressWarnings(gsheet2tbl('https://docs.google.com/spreadsheets/d/1HZydd6qo-GcQVqnwQnerHHnMEyR6faJXKN7Egkuqp4I/edit#gid=1292069466'))
-  table <- cbind(table[13:14],table[25],table[51],table[56])
+  table <- cbind(table[13:14],table[18],table[25],table[51],table[56])
   na.omit(table)
   table <- data.frame(table)
   return(table)
