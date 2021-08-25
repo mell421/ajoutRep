@@ -70,6 +70,16 @@ aTestConcluBis <- function(){
   na.omit(table)
   return(table)
 }
+aTestSem <- function(){
+  table <- data.frame(suppressWarnings(gsheet2tbl('https://docs.google.com/spreadsheets/d/1HZydd6qo-GcQVqnwQnerHHnMEyR6faJXKN7Egkuqp4I/edit#gid=1207334117')))
+  na.omit(table)
+  return(table)
+}
+aTestMois <- function(){
+  table <- data.frame(suppressWarnings(gsheet2tbl('https://docs.google.com/spreadsheets/d/1HZydd6qo-GcQVqnwQnerHHnMEyR6faJXKN7Egkuqp4I/edit#gid=2030359725')))
+  na.omit(table)
+  return(table)
+}
 aTestEff <- function(){
   table <- data.frame(suppressWarnings(gsheet2tbl('https://docs.google.com/spreadsheets/d/1HZydd6qo-GcQVqnwQnerHHnMEyR6faJXKN7Egkuqp4I/edit#gid=984518513')))
   na.omit(table)

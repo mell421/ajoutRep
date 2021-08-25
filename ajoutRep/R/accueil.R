@@ -3,6 +3,7 @@
 
 # usethis::use_vignette("base_de_donnees_principale")
 
+library("gsheet")
 
 # fonction qui charge la page d'accueil
 accueil <- function(){
@@ -13,5 +14,3 @@ accueil <- function(){
 
   return(table)
 }
-s <- accueil()
-head(s)

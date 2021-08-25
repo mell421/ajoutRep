@@ -1,0 +1,110 @@
+---
+title: "myData"
+output: 
+  html_document:
+    toc: false
+  pdf_document:
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## text mining
+
+You can also embed plots, for example:
+
+## nb de caracteres conclu
+```{r, echo=FALSE}
+suppressWarnings(source("~/GitHub/ajoutRep/ajoutRep/R/sources.R"))
+
+  CopyS <-suppressWarnings(copy.conclu())
+dataC <- data.frame(CopyS$nbCarConclu,CopyS$nbCarConcluBis,CopyS$jour_1,CopyS$date)
+  
+  plot(CopyS$nbCarConcluBis,main="nb de caracteres conclu",type = "l",col="red",xlab = "date")
+  lines(CopyS$nbCarConclu,type = "l",col="blue")
+  
+  plot(accueil())
+  plot(copy.max())
+  plot(smra())
+  plot(resumeS())
+  
+  
+```
+
+## multiple plots
+```{r ,echo=FALSE}
+suppressWarnings(source("~/GitHub/ajoutRep/ajoutRep/R/sources.R"))
+
+main <- function(){
+  accueil <- accueil()
+  summary(accueil)
+  acc <- data.frame(accueil[3:4])
+  plot(acc)
+}
+suppressWarnings(main())
+
+
+```
+
+```{r cars, echo=FALSE}
+# plot(cars)
+```
+
+## networks
+
+```{r, echo=FALSE}
+library(tidyverse)
+library(ggraph)
+library(tidygraph)
+library(babynames)
+
+
+### EXPLORE BABYNAMES STRUCTURE 
+head(babynames)
+
+
+### CREATE NODES TABLE 
+get_random_names <- function(n) { 
+  unique_babynames <- distinct(babynames, name, .keep_all = TRUE) 
+  index <- sample(1:nrow(unique_babynames), n, replace = FALSE) 
+  names <- unique_babynames[index, ] 
+  names 
+}
+
+nodes <- get_random_names(18)
+
+
+### CREATE LINKS TABLE 
+# Create source and target vectors 
+src <- sample(1:nrow(nodes), nrow(nodes)*2, replace = TRUE)  
+target <- sample(1:nrow(nodes), nrow(nodes)*2, replace = TRUE)
+
+# Merge vectors to form a single table 
+links <- data.frame(src, target)
+
+# Clean up 
+links <- data.frame(src, target) %>%  
+  filter(!(src == target)) 
+links <- unique(links[c("src", "target")])
+
+
+### PLOT NETWORK 
+# Type cast to tbl_graph object
+social_net_tbls <- tbl_graph(nodes = nodes, 
+                             edges = links, 
+                             directed = FALSE)
+
+# Create the network 
+social_net <- ggraph(social_net_tbls, layout = "stress") +
+  geom_node_point(size = 2) +                                         
+  geom_node_text(aes(label = name), nudge_y = 0.05, nudge_x = 0.2)+ 
+  geom_edge_link() +
+  theme_void()
+
+# Render the network 
+show(social_net)
+```
+
+
