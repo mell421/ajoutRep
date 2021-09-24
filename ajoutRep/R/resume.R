@@ -155,5 +155,23 @@ ordreATerm <- function(){
   return(table)
 }
 
+pageappressup <- function(){
+  table <- suppressWarnings(gsheet2tbl('https://docs.google.com/spreadsheets/d/1HZydd6qo-GcQVqnwQnerHHnMEyR6faJXKN7Egkuqp4I/edit#gid=499443320'))
+  table <- table[1:16]
+  table <- data.frame(table)
+  na.omit(table)
+
+  return(table)
+}
+
+pageappres <- function(){
+  table <- suppressWarnings(gsheet2tbl('https://docs.google.com/spreadsheets/d/1HZydd6qo-GcQVqnwQnerHHnMEyR6faJXKN7Egkuqp4I/edit#gid=1597358116'))
+  table <- table[1:16]
+  table <- data.frame(table)
+  na.omit(table)
+
+  return(table)
+}
+
 
 
